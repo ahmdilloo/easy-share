@@ -1,0 +1,37 @@
+<div class="ui two column computer one column mobile grid" *ngIf="!setup.complete">
+	<div class="ui centered aligned row">
+		<div class="six wide column">
+			<div class="ui left labeled fluid input">
+				<div class="ui inverted green label">واحد</div>
+				<input [(ngModel)]="setup.units" type="number" placeholder="تعداد کل واحد های ساختمان"/>
+			</div> 
+		</div>
+	</div>
+	<div class="ui centered aligned row">
+		<div class="six wide column">
+			<div class="ui left labeled fluid input">
+				<div class="ui inverted green label">تومان</div>
+				<input [(ngModel)]="setup.price" type="number" placeholder="مبلغ قبض"/>
+			</div>
+		</div>
+	</div>
+	<div class="ui centered aligned row">
+		<div class="ui buttons">
+	      <button 
+	      	class="ui brown inverted button"
+	      	[class.active]="setup.type === 'charge'"
+	      	(click)="setType('charge')">شارژ</button>
+	      <button
+	      	class="ui green inverted button"
+	      	[class.active]="setup.type === 'gas'"
+	      	(click)="setType('gas')">قبض گاز</button>
+	      <button
+	      	class="ui blue inverted button"
+	      	[class.active]="setup.type === 'water'"
+	      	(click)="setType('water')">قبض آب</button>
+	    </div>
+	</div>
+	<div class="ui centered aligned row">
+		<button class="ui primary button" (click)="toggleView()">ثبت</button>
+	</div>
+</div>

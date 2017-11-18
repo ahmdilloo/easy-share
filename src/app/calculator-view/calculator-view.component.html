@@ -1,0 +1,44 @@
+<div *ngIf="setup.complete">
+	<!-- Back button -->
+	<div class="ui grid">
+		<div class="ui row">
+			<div class="ui right aligned column">
+				<div class="ui button" (click)="toggleView()">
+					بازگشت
+					<i class="ui right arrow icon"></i> 
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<!-- Table View -->
+	<br>
+	<div class="ui fluid-container">
+		<div class="ui right aligned bordered green segment">
+			<textarea class="desc" [(ngModel)]="setup.text"></textarea>
+		</div>
+	</div>
+	<table class="ui celled table">
+		
+		<thead>
+			<tr class="ui center aligned">
+				<th>مبلغ سهم</th>
+				<th>تعداد نفرات</th>
+				<th>شماره واحد</th>
+			</tr>
+		</thead>
+		<tbody class="ui center aligned">
+			<tr *ngFor="let unit of result">
+				<td>{{unit.payAmount}}</td>
+				<td>
+					<div class="ui input">
+						<input type="number" [(ngModel)]="unit.persons" (keyup)="calculateResult()">
+					</div>
+				</td>
+				<td>{{unit.unitNo + 1}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

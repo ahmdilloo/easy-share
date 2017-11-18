@@ -1,0 +1,11 @@
+@import '../../../semantic/dist/semantic.min.css';
+@font-face {
+	font-family: 'samim';
+	src: url('../../assets/Samim-WOL.woff2');
+}
+* {
+	font-family: samim !important;
+}
+body {
+	background-color: #dadada;
+}
