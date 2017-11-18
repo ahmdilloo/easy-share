@@ -291,10 +291,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var billTypes = {
     water: {
-        rule: "perUnit"
+        rule: "perPerson"
     },
     gas: {
-        rule: "perPerson"
+        rule: "perUnit"
     },
     charge: {
         rule: "perUnit"

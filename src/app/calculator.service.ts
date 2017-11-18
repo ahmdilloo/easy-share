@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 
 const billTypes = {
 	water: {
-		rule: "perUnit"
+		rule: "perPerson"
 	},
 	gas: {
-		rule: "perPerson"
+		rule: "perUnit"
 	},
 	charge: {
 		rule: "perUnit"
