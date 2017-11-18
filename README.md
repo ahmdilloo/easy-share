@@ -5,5 +5,5 @@ There are three type of bills:
 Water
 Gas
 Charge
-gas  calculate according to persons who live in unit.
-water and charge calculate according to number of building units count.
+gas  calculate according to number of building units count .
+water and charge calculate according to persons who live in unit.
